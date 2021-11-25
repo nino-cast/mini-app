@@ -1,10 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useEffect } from 'react';
+import { useUser } from '../context/auth';
 import { login } from '../lib/auth';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
+  const user = useUser();
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
+
   return (
     <div className={styles.container}>
       <Head>
