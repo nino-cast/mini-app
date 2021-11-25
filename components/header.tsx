@@ -9,7 +9,7 @@ const Header = () => {
     <header className="border-b flex items-center p-4">
       <h1>
         <Link href="/">
-          <a className="text-lg font-bold">Mini App</a>
+          <a className="text-xl font-logo">iam</a>
         </Link>
       </h1>
       <span className="flex-1"></span>
