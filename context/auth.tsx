@@ -61,4 +61,4 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 };
 
 // コンテクストを受け取るメソッドを定義
-export const useUser = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext);
