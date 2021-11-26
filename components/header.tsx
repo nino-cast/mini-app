@@ -1,28 +1,21 @@
 import Link from 'next/link';
 import { useAuth } from '../context/auth';
-import Image from 'next/image';
+import { login } from '../lib/auth';
+import Button from './button';
 
 const Header = () => {
-  const auth = useAuth();
+  const user = useAuth();
 
   return (
     <header className="border-b flex items-center p-4">
       <h1>
         <Link href="/">
-          <a className="text-xl font-logo">iam</a>
+          <a className="text-2xl font-logo">iam</a>
         </Link>
       </h1>
       <span className="flex-1"></span>
-      {auth === null && (
-        <button className="rounded bg-blue-500 text-white px-4 py-2">
-          ログイン
-        </button>
-      )}
-      {auth && (
-        <button>
-          <Image src={auth.photoURL} width="40" height="40" alt="" />
-        </button>
-      )}
+      {user === null && <Button onClick={login}>ログイン</Button>}
+      {user && <button>ユーザーメニュー</button>}
     </header>
   );
 };
