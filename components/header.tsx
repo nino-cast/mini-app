@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useAuth } from '../context/auth';
 import { login } from '../lib/auth';
 import Button from './button';
+import UserMenu from './user-menu';
 
 const Header = () => {
   const user = useAuth();
@@ -15,7 +16,7 @@ const Header = () => {
       </h1>
       <span className="flex-1"></span>
       {user === null && <Button onClick={login}>ログイン</Button>}
-      {user && <button>ユーザーメニュー</button>}
+      {user && <UserMenu />}
     </header>
   );
 };

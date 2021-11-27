@@ -3,7 +3,6 @@ import { auth } from '../firebase/client';
 
 export const login = () => {
   const provider = new GoogleAuthProvider();
-  auth.useDeviceLanguage();
   signInWithPopup(auth, provider);
 };
 
