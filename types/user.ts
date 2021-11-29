@@ -8,4 +8,7 @@ export type User = {
   createdAt: number;
   description?: string;
   gender?: Gender;
+  title?: string;
+  links?: string[];
+  coverURL?: string;
 };
