@@ -9,6 +9,8 @@ export type User = {
   description?: string;
   gender?: Gender;
   title?: string;
-  links?: string[];
+  links?: {
+    url: string;
+  }[];
   coverURL?: string;
 };

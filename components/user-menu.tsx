@@ -71,7 +71,7 @@ const UserMenu = () => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="p-1 border-b">
+          <div className="p-1">
             {links.map((link) => (
               <Menu.Item key={link.path}>
                 {({ active }) => (

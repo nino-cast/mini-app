@@ -21,5 +21,8 @@ module.exports = {
       cursor: ['disabled'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };
